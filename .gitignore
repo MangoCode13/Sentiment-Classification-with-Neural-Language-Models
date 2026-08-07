@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Track only these files/folders
+!stage1_notebook.ipynb
+!README.md
+!requirements.txt
+!model_checkpoint/
+!public_test_predictions.csv
+!.gitignore
