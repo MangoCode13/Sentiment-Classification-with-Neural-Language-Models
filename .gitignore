@@ -6,5 +6,7 @@
 !README.md
 !requirements.txt
 !model_checkpoint/
+!model_checkpoint/**
 !public_test_predictions.csv
 !.gitignore
+!.gitattributes

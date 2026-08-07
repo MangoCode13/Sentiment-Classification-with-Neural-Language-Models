@@ -1,5 +1,7 @@
 # Sentiment Classification (DistilBERT, 2-stage fine-tuning)
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MangoCode13/Sentiment-Classification-with-Neural-Language-Models/blob/main/stage1_notebook.ipynb)
+
 This repo contains the stage 1 langugage model training notebook, model checkpoint, dependencies, and prediction outputs for binary sentiment classification:
 
 - `stage1_notebook.ipynb`
