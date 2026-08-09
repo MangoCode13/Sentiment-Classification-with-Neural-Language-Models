@@ -2,7 +2,7 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MangoCode13/Sentiment-Classification-with-Neural-Language-Models/blob/main/stage1_notebook.ipynb)
 
-This repo contains the stage 1 langugage model training notebook, model checkpoint, dependencies, and prediction outputs for binary sentiment classification:
+This repo contains the Stage 1 langugage model training notebook for Assignment 2, model checkpoint, dependencies, and prediction outputs for binary sentiment classification:
 
 - `stage1_notebook.ipynb`
 - `model_checkpoint/` with reloadable model artifacts
@@ -17,7 +17,7 @@ This repo contains the stage 1 langugage model training notebook, model checkpoi
 python3 -m venv .venv
 ```
 
-2. Activate:
+2. Activate (using bash):
 
 ```bash
 source .venv/bin/activate
@@ -29,7 +29,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Open the notebook and select the `.venv` interpreter as the kernel.
+4. Add training and test data from [Assignment 2](https://github.com/judyzhu-gmu/CYSE499_650_Summer2026/blob/main/assignment2/assignment2_instructions.md) to the folder containing the notebook:
+* `train.csv`
+* `public_test.csv`
 
 ## How to run stage1_notebook.ipynb
 
@@ -47,9 +49,9 @@ pip install -r requirements.txt
 - Cleans text and tokenizes with a head+tail strategy to fit 512 tokens.
 - Builds a stratified train/validation split from training data only.
 - Defines class weights for training (`class_weights = [3.0, 1.0]`) and evaluation metrics.
-- Runs hyperparameter tuning for Stage 1 and saves best settings.
-- Trains a 2-stage model:
+- Two-stage model training:
 	- Stage 1: classifier head only.
+	- Runs hyperparameter tuning for the first stage of training and saves best settings.
 	- Stage 2: unfreezes top transformer layers with a lower learning rate.
 - Evaluates on validation split and prints metrics.
 - Generates submission predictions and saves a reloadable checkpoint.
